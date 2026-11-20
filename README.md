@@ -1,15 +1,5 @@
 # Intern Assignment - Java Set 2
 
-## Email Summary
-
-**From:** Poonam (HR, Igniters Hub)  
-**Sent:** November 17, 2026  
-**Deadline:** Saturday, November 21, 2026  
-
-### Selection Stages
-1. Complete and submit the attached Java coding assignment (`Internship - Java_Set 2.pdf`).
-2. Clear the Technical & HR Interview.
-
 ### Tech Stack
 Java (Challenges 2–4 explicitly list Java Spring Boot, Hibernate).
 
@@ -19,21 +9,9 @@ Java (Challenges 2–4 explicitly list Java Spring Boot, Hibernate).
 
 ---
 
-## Action Plan
-
-1. **Acknowledge the email immediately** – Reply All to Poonam's email to confirm receipt and acknowledge the November 21 deadline (keep HR in the loop).
-2. **Set up a GitHub repository** – Create a new public repo under your own GitHub account (or use the IgnitersHubProjects org if you have write access). Reference: https://github.com/IgnitersHubProjects/interns-assignments
-3. **Complete all 4 mandatory challenges** – Build and test all four programs before committing.
-
----
-
 ## Challenges
 
 ### Challenge 1 – Programmatic Email Sender
-- Java program using JavaMail / Spring Boot Mail via Gmail SMTP.
-- Sends an email to `hr@ignitershub.com`.
-- **Subject:** Must contain `Challenge 3 Completed` (exact string as specified in the PDF under Challenge 1).
-- **Body:** Your Name, Semester, Branch (CSE), Roll Number, plus one image attachment (`.png`, `.jpg`, or `.jpeg` only). Configured via env vars.
 
 ### Challenge 2 – Palindrome Checker (Spring Boot + Hibernate)
 - Prompt the user for a string input and check whether it reads the same forwards and backwards.
