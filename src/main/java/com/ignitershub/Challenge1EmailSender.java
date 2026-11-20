@@ -19,6 +19,7 @@ public class Challenge1EmailSender {
     private final String branch;
     private final String rollNumber;
     private final String college;
+    private final String repoUrl;
 
     public Challenge1EmailSender(JavaMailSender mailSender,
                                  @Value("${assignment.email.to}") String to,
@@ -27,7 +28,8 @@ public class Challenge1EmailSender {
                                  @Value("${assignment.sender.semester}") String semester,
                                  @Value("${assignment.sender.branch}") String branch,
                                  @Value("${assignment.sender.roll-number}") String rollNumber,
-                                 @Value("${assignment.sender.college:}") String college) {
+                                 @Value("${assignment.sender.college:}") String college,
+                                 @Value("${assignment.repo.url}") String repoUrl) {
         this.mailSender = mailSender;
         this.to = to;
         this.subject = subject;
@@ -36,6 +38,7 @@ public class Challenge1EmailSender {
         this.branch = branch;
         this.rollNumber = rollNumber;
         this.college = college;
+        this.repoUrl = repoUrl;
     }
 
     public void sendAssignmentEmail(byte[] imageBytes, String imageFileName) {
@@ -64,8 +67,10 @@ public class Challenge1EmailSender {
     private String buildBody() {
         StringBuilder body = new StringBuilder();
         body.append("Dear HR Team,\n\n");
-        body.append("I have completed Challenge 1 of the Java internship assignment.\n\n");
-        body.append("Details:\n");
+        body.append("I hope you are doing well.\n\n");
+        body.append("I am writing to submit my Java coding assignment for the Igniters Hub internship (Java Set 2).\n");
+        body.append("All four mandatory challenges have been completed and pushed to my GitHub repository.\n\n");
+        body.append("Student Details:\n");
         body.append("Name: ").append(name).append("\n");
         body.append("Semester: ").append(semester).append("\n");
         body.append("Branch: ").append(branch).append("\n");
@@ -74,7 +79,9 @@ public class Challenge1EmailSender {
             body.append("College: ").append(college).append("\n");
         }
         body.append("\n");
-        body.append("Please find the attached image as part of the submission.\n\n");
+        body.append("GitHub Repository: ").append(repoUrl).append("\n\n");
+        body.append("Please find the attached image as part of this submission.\n\n");
+        body.append("Thank you for your time and consideration.\n\n");
         body.append("Best regards,\n");
         body.append(name);
         return body.toString();
